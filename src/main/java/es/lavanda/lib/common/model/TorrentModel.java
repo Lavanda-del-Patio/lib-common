@@ -32,6 +32,10 @@ public class TorrentModel implements Serializable {
 
     private String torrentUrl;
 
+    private String torrentMagnet;
+
+    private boolean torrentValidate;
+
     private Page torrentPage;
 
     public enum Page {
