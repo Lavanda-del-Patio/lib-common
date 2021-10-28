@@ -23,7 +23,7 @@
     <scm>
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
-        <url>git@github.com:luiscajl/lavanda-microservices.git</url>
+        <url>git@github.com:Lavanda-del-Patio/lib-common.git</url>
         <tag>HEAD</tag>
     </scm>
 
