@@ -26,8 +26,6 @@ public class TorrentModel implements Serializable {
 
     private boolean downloaded;
 
-    private boolean assignToDownload;
-
     private String torrentSize;
 
     private String torrentUrl;
