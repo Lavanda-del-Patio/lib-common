@@ -38,6 +38,16 @@ jobs:
           directory: ${{ env.DIRECTORY }}
           github_workspace: $GITHUB_WORKSPACE
           github_token: ${{ secrets.GITHUB_TOKEN }} 
+  pull-request:
+    runs-on: ubuntu-latest
+    if: (github.ref == 'refs/heads/develop')  && (github.event_name == 'push')  
+    steps:
+    - uses: actions/checkout@v2
+    - name: pull-request
+      uses: repo-sync/pull-request@v2
+      with:
+        destination_branch: "main"
+        github_token: ${{ secrets.GITHUB_TOKEN }}              
   next-snapshot:
     needs: deploy-release
     if: (github.ref == 'refs/heads/main')  && (github.event_name == 'push')  
@@ -49,7 +59,7 @@ jobs:
           ref: develop   
       - uses: luiscajl/next-maven-snapshot@main
   notification:
-    needs: [deploy-release, next-snapshot, test-nightly]
+    needs: [deploy-release, next-snapshot]
     runs-on: ubuntu-latest  
     steps:     
     - name: Send telegram message
