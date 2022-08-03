@@ -3,7 +3,7 @@
 
     <groupId>es.lavanda</groupId>
     <artifactId>lib-common</artifactId>
-    <version>0.0.61</version>
+    <version>0.0.62-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>lavanda-lib-common</name>
@@ -72,7 +72,7 @@
 
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>3.0.0-M1</version>
+                <version>3.0.0-M6</version>
                 <configuration>
                     <scmCommentPrefix>[ci skip]</scmCommentPrefix>
                     <tagNameFormat>@{project.version}</tagNameFormat>
