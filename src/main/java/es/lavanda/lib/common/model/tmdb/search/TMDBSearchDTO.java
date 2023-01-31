@@ -1,5 +1,6 @@
 package es.lavanda.lib.common.model.tmdb.search;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -16,6 +17,6 @@ public class TMDBSearchDTO {
     @JsonProperty("total_pages")
     private int totalPages;
 
-    private List<TMDBResultDTO> results;
+    private List<TMDBResultDTO> results = new ArrayList<>();
 
 }
