@@ -7,8 +7,6 @@ import lombok.Data;
 @Data
 public class TelegramFilebotExecutionIDTO implements Serializable {
 
-    private static final long serialVersionUID = -5766945695641205660L;
-
     private String id;
 
     private String path;
