@@ -11,9 +11,11 @@ public class FilebotExecutionIDTO implements Serializable {
 
     private String id;
 
-    private List<String> files = new ArrayList<>();
-
     private String path;
+
+    private String name;
+    
+    private List<String> files = new ArrayList<>();
 
     private List<String> possibilities = new ArrayList<>();
 
