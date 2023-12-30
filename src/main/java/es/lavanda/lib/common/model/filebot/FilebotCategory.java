@@ -34,6 +34,9 @@ public enum FilebotCategory {
             if (b.value.equals(value)) {
                 return b;
             }
+            if (b.name().equals(value)){
+                return b;
+            }
         }
         throw new IllegalArgumentException("Unexpected value '" + value + "'");
     }
